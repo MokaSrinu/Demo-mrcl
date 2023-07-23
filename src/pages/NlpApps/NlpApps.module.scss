@@ -1,0 +1,23 @@
+.NlpApps__Container{
+    width: 100%;
+    .DescriptionWrapper{
+        display: flex;
+        width: 100%;
+        .TextDesc{
+            width: 70%;
+            .DescHeader{
+               
+            }
+            .DescText{
+
+            }
+        }
+        .ChatBotImageWrapper{
+            width: 30%;
+            .ChatBotImage{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

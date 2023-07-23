@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import classes from './App.module.scss';
+import { Layout } from './components';
+import { BotBuilder, Home, NlpApps } from './pages';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.App}>
+      <Layout>
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/home' element={<Home />}/>
+          <Route path='/nlp-apps' element={<NlpApps />}/>
+          <Route path='/bot-builder' element={<BotBuilder />}/>
+        </Routes>
+      </Layout>
     </div>
   );
 }
